@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tip Calculator</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="page">
+            <div id="content">
+                <h1>Tip Calculator</h1>
+                
+                <p>How much was your bill?
+                <br />
+                $ <input id="billamt" type="text" placeholder="Bill Amount" />
+                </p>
+
+                <p>How much would you like to tip?
+                <br />
+                <select id="tip">
+                    <option value="0.1">10%</option>
+                    <option value="0.15">15%</option>
+                    <option value="0.18">18%</option>
+                </select>
+                </p>
+                
+                <p>How much people are sharing the bill?
+                <br />
+                <input id="peopleamt" type="text" placeholder="Number of People" />
+                </p>
+
+                <div id="calcbutton">
+                    <button type="button" id="calculate">Calculate</button>    
+                </div>
+                
+
+                <!--Tips split may not equal the tip total due to the amount of people splitting the bill-->
+                <div id="tiptotalamount">
+                    <p>
+                        Tip Total = $ <span id="tipfinal"></span>
+                        <br />
+
+                        Tips Split = $
+                        <span id="tipamt"></span>
+                        <span id="perperson">per person</span>
+                    </p>
+
+                    <h4>*Calculations might be off if the amount of people splitting the check doesn't divide into the total amount perfectly</h4>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
